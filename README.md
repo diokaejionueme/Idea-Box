@@ -1,12 +1,8 @@
-# project Name: Idea Box
+## project Name: Idea Box
 
-# Source: https://frontend.turing.edu/
+## Source: https://frontend.turing.edu/
 
-#
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Author: Dioka Ejionueme
 
 ## Available Scripts
 
