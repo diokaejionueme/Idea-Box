@@ -10,6 +10,7 @@ function App(){
     { id: 3, title: 'Learn a martial art', description: 'To exact vengeance upon my enemies' },
 ]
   const [ideas, setIdeas] = useState(dummyIdeas)
+  
   function addIdea (newIdea) {
     setIdeas ([...ideas, newIdea])
   }

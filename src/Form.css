@@ -1,11 +1,40 @@
-
+/* Center the form horizontally */
 form {
-    margin: auto;
-  }
-  
-  input, button {
-    margin: 5px;
-    width: 30%;
-    border: 2px solid black;
-    font-size: 18px;
-  }
+  margin: 0 auto;
+  width: 60%;
+  max-width: 500px; /* Limit the width for larger screens */
+  padding: 24px;
+  background-color: aqua; /* Change to the provided background color */
+  border: 1px solid #ccc;
+  border-radius: 16px; /* Change to the provided border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form elements (input and button) */
+input, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Style the button */
+button {
+  background-color: #FFC0CD; /* Change to the provided background color */
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Add hover effect on the button */
+button:hover {
+  background-color: #ff7f8e; /* Slightly darker color for the hover effect */
+}
+
+/* Add focus effect on the input elements */
+input:focus {
+  border-color: #FFC0CD; /* Change to the provided background color */
+}
