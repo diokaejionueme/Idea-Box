@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect,} from 'react';
 import './App.css';
 import Ideas from './Ideas';
 import Form from './Form';
@@ -20,6 +20,8 @@ function App(){
     const filteredIdeas = ideas.filter(idea => idea.id !== id);
     setIdeas(filteredIdeas)
   }
+
+  
 
   return (
     <main className="App">
