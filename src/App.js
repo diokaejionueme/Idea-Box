@@ -39,14 +39,17 @@ function App(){
     getIdeas()
   }, [])
   
+ 
+
   function deleteIdea(id){
-    console.log(id);
-    const filteredIdeas = ideas.filter(idea => idea.id !== id);
-    setIdeas(filteredIdeas)
+    fetch(`http://localhost:3001/api/v1/ideas/${id}`, {
+      method: 'DELETE'
+    })
+    .then(response => {
+      const filteredIdeas = ideas.filter(idea => idea.id !== id);
+      setIdeas(filteredIdeas);
+    })
   }
-
-
-
   return (
     <main className="App">
         <h1>Idea Box</h1>
