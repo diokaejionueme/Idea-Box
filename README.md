@@ -20,6 +20,8 @@ Follow The Steps in each ReadMe (Outlined Below) on getting both Idea Box and It
 
 [http://localhost:3001/api/v1/idea]: You Should see a list of your Ideas from the Backend Here.
 
+###### Notice: Ignore First Three Ideas displayed if attempting to delete (they are placeholder ideas)
+
 ## Available Scripts
 
 In the project directory, you can run:
