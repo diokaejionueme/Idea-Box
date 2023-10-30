@@ -15,7 +15,7 @@ function App(){
 
 
   function addIdea(newIdea){
-    fetch('http://localhost:3001/api/v1/ideas', {
+    fetch('https://flourishing-malasada-4a1b15.netlify.app/api/v1/ideas', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json', 
@@ -30,7 +30,7 @@ function App(){
 
 
   function getIdeas(){
-    fetch('http://localhost:3001/api/v1/ideas')
+    fetch('https://flourishing-malasada-4a1b15.netlify.app/api/v1/ideas')
     .then(response => response.json())
     .then(data =>setIdeas([...ideas, ...data]))
     .catch(error => setError('Fiddlessticks!!! Something went Terribly wrong'));
@@ -42,7 +42,7 @@ function App(){
  
 
   function deleteIdea(id){
-    fetch(`http://localhost:3001/api/v1/ideas/${id}`, {
+    fetch(`https://flourishing-malasada-4a1b15.netlify.app/api/v1/ideas/${id}`, {
       method: 'DELETE'
     })
     .then(response => {
