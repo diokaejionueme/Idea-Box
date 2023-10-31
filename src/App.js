@@ -15,7 +15,7 @@ function App(){
 
 
   function addIdea(newIdea){
-    fetch('/api/v1/ideas', {
+    fetch('https://idea-box-api-diokaejionueme.vercel.app/api/v1/ideas', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json', 
@@ -30,7 +30,7 @@ function App(){
 
 
   function getIdeas(){
-    fetch('/api/v1/ideas')
+    fetch('https://idea-box-api-diokaejionueme.vercel.app/api/v1/ideas')
     .then(response => response.json())
     .then(data =>setIdeas([...ideas, ...data]))
     .catch(error => setError('Fiddlessticks!!! Something went Terribly wrong'));
@@ -42,7 +42,7 @@ function App(){
  
 
   function deleteIdea(id){
-    fetch(`/api/v1/ideas/${id}`, {
+    fetch(`https://idea-box-api-diokaejionueme.vercel.app/api/v1/ideas/${id}`, {
       method: 'DELETE'
     })
     .then(response => {
