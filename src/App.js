@@ -15,7 +15,7 @@ function App(){
 
 
   function addIdea(newIdea){
-    fetch('https://idea-box-liart.vercel.app/api/v1/ideas', {
+    fetch('http://localhost:3001/api/v1/ideas', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json', 
@@ -30,11 +30,13 @@ function App(){
 
 
   function getIdeas(){
-    fetch('https://idea-box-liart.vercel.app/api/v1/ideas')
+    fetch('http://localhost:3001/api/v1/ideas')
     .then(response => response.json())
     .then(data =>setIdeas([...ideas, ...data]))
     .catch(error => setError('Fiddlessticks!!! Something went Terribly wrong'));
   }
+
+
   useEffect(() => {
     getIdeas()
   }, [])
@@ -42,7 +44,7 @@ function App(){
  
 
   function deleteIdea(id){
-    fetch(`https://idea-box-liart.vercel.app/api/v1/ideas/${id}`, {
+    fetch(`http://localhost:3001/api/v1/ideas/${id}`, {
       method: 'DELETE'
     })
     .then(response => {
@@ -50,6 +52,9 @@ function App(){
       setIdeas(filteredIdeas);
     })
   }
+
+
+  
   return (
     <main className="App">
         <h1>Idea Box</h1>
